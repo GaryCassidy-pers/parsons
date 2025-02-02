@@ -11,8 +11,7 @@ self.onmessage = async (event) => {
 	await pyodideReadyPromise;
 	const python = event.data;
 	try {
-		/* let results = await self.pyodide.runPythonAsync(python); */
-		let results = await self.pyodide.runPython(python);
+		let results = await self.pyodide.runPythonAsync(python);
 		self.postMessage({results});
 	} catch (error) {
 		self.postMessage({error: error});
