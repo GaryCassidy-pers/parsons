@@ -81,25 +81,25 @@ export function prepareCode(submittedCode, codeHeader) {
 	let lines = codeHeader.split('\n');
 	const startLine = countDocstringLines(lines);
 	const codeLines = submittedCode.split('\n');
-	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
+	/* if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
 		return {
 			status: 'fail',
 			header: 'Error running tests',
 			details: 'First code line must be `def` or `class` declaration',
 		};
-	}
+	} */
 	// Remove function def or class declaration statement, its relied on elsewhere
 	codeLines.shift();
 
 	let line = findNextUnindentedLine(codeLines, 0);
-	if (line != codeLines.length) {
+	/* if (line != codeLines.length) {
 		return {
 			status: 'fail',
 			header: 'Error running tests',
 			details:
 				'All lines in a function or class definition should be indented at least once. It looks like you have a line that has no indentation.',
 		};
-	}
+	} */
 	const linesToPreserve = lines.slice(0, startLine);
 	const endOfReplaceLines = findNextUnindentedLine(lines, startLine);
 	const extraLinesToPreserve = lines.slice(endOfReplaceLines);
