@@ -4,7 +4,7 @@ problem_description: |
   <code>hello_world</code>
     Returns the translation of "Hello, World" into the language
     specified by the language code (e.g. "es", "pt", "en"),
-    defaulting to English if an unknown language code is specified.
+    defaulting to English if any other code is specified.
 
   <pre><code>
   >>> hello_world("en")
