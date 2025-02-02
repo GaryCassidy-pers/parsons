@@ -2,7 +2,7 @@ problem_name: hello_world
 
 problem_description: |
   <code>hello_world</code>
-    returns the translation of "Hello, World" into the language
+    Returns the translation of "Hello, World" into the language
     specified by the language code (e.g. "es", "pt", "en"),
     defaulting to English if an unknown language code is specified.
 
