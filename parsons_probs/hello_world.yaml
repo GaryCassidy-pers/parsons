@@ -17,11 +17,11 @@ problem_description: |
 
 code_lines: |
   def hello_world(language_code): #0given
-  if language_code == !BLANK:
-  return !BLANK
-  elif language_code == !BLANK:
-  return !BLANK
+  if language_code == en:
+  return 'Hello, World'
+  elif language_code == 'es':
+  return 'Hola, Mundo'
   else:
-  return !BLANK
+  return 'Olá, Mundo'
 
 test_fn: hello_world
