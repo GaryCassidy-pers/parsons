@@ -3953,6 +3953,9 @@ function cleanupDoctestResults(resultsStr) {
 }
 
 function prepareCode(submittedCode, codeHeader) {
+	str = JSON.stringify(submittedCode);
+	console.log(str); // Logs output to dev tools console.
+alert(str); // Displays output using window.alert()
 	submittedCode += '\n';
 	let lines = codeHeader.split('\n');
 	const startLine = countDocstringLines(lines);
@@ -4351,9 +4354,6 @@ function initWidget() {
 
 async function handleSubmit(submittedCode, reprCode, codeHeader) {
 	let testResults = prepareCode(submittedCode, codeHeader);
-str = JSON.stringify(testResults);
-	console.log(str); // Logs output to dev tools console.
-alert(str); // Displays output using window.alert()
 	if (testResults.code) {
 		try {
 			const code = testResults.code + '\nsys.stdout.getvalue()';
