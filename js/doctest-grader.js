@@ -85,7 +85,7 @@ export function prepareCode(submittedCode, codeHeader) {
 		return {
 			status: 'fail',
 			header: 'Error running tests',
-			details: 'First code line must be `def` or `class` declaration',
+			details: 'First code line must be `def ` or `class` declaration',
 		};
 	} */
 	// Remove function def or class declaration statement, its relied on elsewhere
