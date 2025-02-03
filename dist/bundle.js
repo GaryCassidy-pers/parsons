@@ -4351,7 +4351,7 @@ function initWidget() {
 
 async function handleSubmit(submittedCode, reprCode, codeHeader) {
 	let testResults = prepareCode(submittedCode, codeHeader);
-str = JSON.stringify(obj);
+str = JSON.stringify(testResults);
 	console.log(str); // Logs output to dev tools console.
 alert(str); // Displays output using window.alert()
 	if (testResults.code) {
