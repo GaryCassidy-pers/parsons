@@ -118,8 +118,8 @@ export function prepareCode(submittedCode, codeHeader) {
 	finalCode.push('import io');
 	finalCode.push('sys.stdout = io.StringIO()');
 	// Runs the doctests
-	/* finalCode.push('import doctest');
-	finalCode.push('doctest.testmod(verbose=True)');  */
+	finalCode.push('import doctest');
+	finalCode.push('doctest.testmod(verbose=True)');
 	finalCode = finalCode.join('\n');
 
 	return {
