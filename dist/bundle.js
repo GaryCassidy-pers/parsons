@@ -4007,7 +4007,7 @@ function prepareCode(submittedCode, codeHeader) {
 	finalCode.push('import doctest');
 	finalCode.push('doctest.testmod(verbose=True)');
 	finalCode = finalCode.join('\n');
-
+alert(finalCode);
 	return {
 		status: 'success',
 		header: 'Running tests...',
