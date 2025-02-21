@@ -3967,8 +3967,9 @@ function prepareCode(submittedCode, codeHeader) {
 	// Remove function def or class declaration statement, its relied on elsewhere
 	// GARYC codeLines.shift();
 	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
-		//codelines.unshift();
-		alert(codeHeader)
+		funcDef = codelines.slice(0, input.indexOf("\n"));
+		codelines.unshift(funcDef);
+		alert(codelines)
 	}
 
 	let line = findNextUnindentedLine(codeLines, 0);
