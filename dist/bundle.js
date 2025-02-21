@@ -3957,7 +3957,7 @@ function prepareCode(submittedCode, codeHeader) {
 	let lines = codeHeader.split('\n');
 	const startLine = countDocstringLines(lines);
 	const codeLines = submittedCode.split('\n');
-	/*if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
+	/* GARYC if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
 		return {
 			status: 'fail',
 			header: 'Error running tests',
@@ -3965,10 +3965,10 @@ function prepareCode(submittedCode, codeHeader) {
 		};
 	}*/
 	// Remove function def or class declaration statement, its relied on elsewhere
-	codeLines.shift();
+	// GARYC codeLines.shift();
 
 	let line = findNextUnindentedLine(codeLines, 0);
-	/*if (line != codeLines.length) {
+	/* GARYC if (line != codeLines.length) {
 		return {
 			status: 'fail',
 			header: 'Error running tests',
