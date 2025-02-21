@@ -3969,7 +3969,7 @@ function prepareCode(submittedCode, codeHeader) {
 	//Force a tab into each line if code doesn't define the function
 	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
 		codeLines.forEach(function (item, i) {
-    		codeLines[i] = '\t' + codeLines[i];
+    		codeLines[i] = '\t\t' + codeLines[i];
 		});
 		/* GARYC const funcDef = codeHeader.slice(0, codeHeader.indexOf("\n"));
 		alert(funcDef);
