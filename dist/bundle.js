@@ -3966,11 +3966,15 @@ function prepareCode(submittedCode, codeHeader) {
 	}*/
 	// Remove function def or class declaration statement, its relied on elsewhere
 	// GARYC codeLines.shift();
+	//Force a tab into each line if code doesn't define the function
 	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
-		const funcDef = codeHeader.slice(0, codeHeader.indexOf("\n"));
+		codeLines.forEach(function (item, i) {
+    		codeLines[i] = '\t' + codeLines[i];
+		});
+		/* GARYC const funcDef = codeHeader.slice(0, codeHeader.indexOf("\n"));
 		alert(funcDef);
 		codeLines.unshift(funcDef);
-		alert(codeLines);
+		alert(codeLines);*/
 	}
 
 	let line = findNextUnindentedLine(codeLines, 0);
