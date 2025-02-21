@@ -3967,7 +3967,7 @@ function prepareCode(submittedCode, codeHeader) {
 	// Remove function def or class declaration statement, its relied on elsewhere
 	// GARYC codeLines.shift();
 	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
-		funcDef = codelines.slice(0, input.indexOf("\n"));
+		funcDef = codeLines.slice(0, input.indexOf("\n"));
 		codeLines.unshift(funcDef);
 		alert(codeLines)
 	}
