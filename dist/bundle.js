@@ -3968,8 +3968,9 @@ function prepareCode(submittedCode, codeHeader) {
 	// GARYC codeLines.shift();
 	if (!(codeLines[0].includes('def') || codeLines[0].includes('class'))) {
 		const funcDef = codeLines.slice(0, codeLines.indexOf("\n"));
+		alert(funcDef);
 		codeLines.unshift(funcDef);
-		alert(codeLines)
+		alert(codeLines);
 	}
 
 	let line = findNextUnindentedLine(codeLines, 0);
